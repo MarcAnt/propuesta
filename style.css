@@ -1,0 +1,58 @@
+
+*, *::before, *::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Karla'; 
+}
+
+
+.content {
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    background-color: red; 
+    text-align: center; 
+}
+
+h1 {
+    color: white; 
+    font-size: 7em; 
+}
+
+img {
+    margin: 1.5em; 
+}
+
+.comentario {
+    width: 65%;
+}
+.indicaciones {
+    font-size: 1.5em;
+}
+.preguntas {
+    font-size: 5em; 
+}
+.preguntas-content {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 60%; 
+}
+
+.preguntas-content > p {
+    font-size: 2em; 
+    color: white; 
+    margin: 1.5em; 
+    width: 30%; 
+    cursor: pointer; 
+    transition: all 250ms ease-in-out; 
+}
+
+.preguntas-content > p:hover {
+    transform: scale(1.2); 
+}

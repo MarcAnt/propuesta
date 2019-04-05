@@ -1,0 +1,117 @@
+body, *::before, *::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Karla'; 
+    overflow: hidden; 
+}
+
+.content {
+    width: 100vw; 
+    height: 100vh;
+    transition: all 1s ease-in-out; 
+    overflow: hidden;
+    position: relative;
+}
+
+.elements  {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 100vw; 
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    color: white; 
+    font-size: 2.5em; 
+    font-family: Arial; 
+}
+.elements:nth-child(1) { z-index: 4}
+.elements:nth-child(2) { z-index: 3}
+.elements:nth-child(3) { z-index: 2}
+.elements:nth-child(4) { z-index: 1}
+
+.elements > p {
+    text-align: center; 
+    width: 80%; 
+    margin: 1em; 
+}
+.elements > img {
+    width: 300px; 
+    height: 300px;
+}
+
+.ocultar {
+    transform: translate(-100%); 
+}
+
+
+.pregunta {
+    text-align: center; 
+    font-size: 1.5em; 
+}
+.preguntas {
+    
+    width: 80%; 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+.opciones-content {
+    text-align: center; 
+    width: 100%; 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.opciones {
+    margin: .5em auto; 
+    width: 50%; 
+    cursor: pointer; 
+    transition: all .2s ease-in; 
+}
+.opciones:hover {
+    transform: scale(1.1); 
+}
+
+/* Animación del Corazón */
+
+.heart {
+    width: 100px; 
+    height: 100px; 
+    background-color: hsl(360, 70%, 50%); 
+    position: relative; 
+    transform: rotate(-45deg); 
+    animation: beat .8s infinite alternate;
+    margin: 1.2em; 
+  }
+  
+  @keyframes beat{
+    to {
+      transform: rotate(-45deg) scale(1.25); 
+  
+    }
+  }
+  
+  .heart::before, .heart::after {
+    content: ''; 
+    width: 100px; 
+    height: 100px; 
+    background-color: hsl(360, 70%, 50%); 
+    position: absolute; 
+    border-radius: 50%; 
+    display:block; 
+  }
+  
+  .heart::before {
+    transform: translate3d(50px, 0 , 0); 
+  }
+  
+  .heart::after {
+    transform: translate3d(0 , -50px , 0); 
+  }
