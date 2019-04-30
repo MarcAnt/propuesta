@@ -135,7 +135,7 @@ for(let i = 1; i  <= colors.length; i++) {
                     document.getElementById('opcion-0').textContent = 'Jesús Cristo'
                     document.getElementById('opcion-1').textContent = 'Spider Man'
                     document.getElementById('opcion-2').textContent = 'La hormiga atómica'
-                    document.getElementById('opcion-3').textContent = 'Don Ramon'
+                    document.getElementById('opcion-3').textContent = 'Don Ramón'
                 },1500)
 
               
